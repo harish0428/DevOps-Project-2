@@ -67,7 +67,7 @@ ec2_instance { 'DevOpsWebinstance1':
   instance_type     => 't2.micro',
   monitoring        => true,
   security_groups   => 'DevOpsProjSG',
-  user_data         => template('apache-puppetbootstrap.sh'),
+  user_data         => template('apachepuppet.sh'),
 }
 ec2_instance { 'DevOpsWebinstance2':
   ensure            => present,
@@ -78,7 +78,7 @@ ec2_instance { 'DevOpsWebinstance2':
   instance_type     => 't2.micro',
   monitoring        => true,
   security_groups   => 'DevOpsProjSG',
-  user_data         => template('apache-puppetbootstrap.sh'),
+  user_data         => template('apachepuppet.sh'),
 }
 elb_loadbalancer { 'DevOpsLB':
   ensure               => present,
