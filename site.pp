@@ -2,7 +2,6 @@ node 'project.puppetagent*.com' {
   class { 'apache':    
     default_mods => false, 
   }  
-
   include apache::mod::ssl  
 
   apache::vhost { 'project.puppetagent*.com-http':    
